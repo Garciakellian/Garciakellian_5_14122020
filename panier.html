@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="images/orinoco-logo.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Orinoco | Panier</title>
+  </head>
+  <body>
+    <header class="navbar bg-info">
+      <a class="navbar-brand  fontpaint font-size1_5 text-light" href="index.html"><img src="images/orinoco-logo.png" alt="logo orinoco" class="pr-2">Orinoco</a>
+      <a class="navbar-brand fontpaint font-size1_5 text-light text-right" href="index.html">Acceuil</a>
+    </header>
+    <main>
+      <div class=" jumbotron">
+        <h1 class="panier_title">Récapitulatif de votre commande</h1>
+          <p class="panier_p">
+            Veuillez vérifier votre commande ci-dessous avant de valider le
+            paiement.
+          </p>
+      </div>
+      <div class="container">
+        <div class="form_flex">
+          <section class="col-lg-5">
+            <form class="row form_panier col-sm-9 col-lg-12" id="panier_form">
+              <div class="form_div">
+                <h3 class="form_title">Vous concernant:</h3>
+                <div class="form_space">
+                  <label class="form_label" for="nom">Nom:</label>
+                  <input class="form_input" type="text" id="nom" name="nom" required placeholder="Votre Nom de famille">
+                </div>
+                <div class="form_space">
+                  <label class="form_label" for="prenom">Prénom:</label>
+                  <input class="form_input" type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                </div>
+                <div class="form_space">
+                  <label class="form_label" for="email">Email:</label>
+                  <input class="form_input" type="email" id="email" name="email" required placeholder="Votre adresse mail">
+                </div>
+              </div>
+              <div class="form_div">
+                <h3 class="form_title">Votre adresse:</h3>
+                <div class="form_special">
+                  <label class="form_label" for="adresse">adresse postal:</label>
+                  <input class="form_input" type="text" id="adresse" name="adresse" required placeholder="Votre adresse">
+                </div>
+                <div class="form_space">
+                  <label class="form_label" for="ville">Ville:</label>
+                  <input class="form_input" type="text" id="ville" name="ville" required placeholder="Votre ville">
+                </div>
+                <div class="form_space">
+                  <label class="form_label" for="cp">Code Postal:</label>
+                  <input class="form_input" type="text" pattern="[0-9]{5}" id="cp" name="cp" required placeholder="Votre code postal">
+                </div>
+                <div class="form_special">
+                  <label class="form_label" for="information">Information supplementaires:</label>
+                  <textarea class="form_input" type="text" id="information" name="information" placeholder="Information supplementaires"></textarea>
+                </div>
+              </div>
+              <div>
+                <h3 class="form_title">Ma commande est un cadeau, je souhaite :</h3>
+                <div class="form_special">
+                  <div class="">
+                    <input class="form_checkbox" type="checkbox" id="gift" name="gift">
+                    <label class="form_label" for="gift">Ajouter un emballage cadeau</label>
+                  </div>
+                  <div class="form_space2">
+                    <input class="form_checkbox" type="checkbox" id="gift" name="gift">
+                    <label class="form_label" for="gift">Cacher les prix</label>
+                  </div>
+                </div>
+              </div>
+              <button class="panier_button" id="bouton">Procédez au paiement</button>
+            </form>
+          </section>
+          <section id="panier">
+            <div id="panier-recap">
+              <p id="panierVide" class="panier_p">Votre panier est vide</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer font-small bg-info">
+      <div class="footer-copyright text-center py-3 text-light">Orinoco© 2020 Copyright</div>
+    </footer>
+    <script src="script.js"></script>
+    <script>panierCreation()</script>
+    <script>confirmCommande()</script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

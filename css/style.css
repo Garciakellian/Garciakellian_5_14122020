@@ -1,0 +1,456 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.fontpaint {
+  font-family: "Finger Paint", cursive;
+}
+
+.font-size1_5 {
+  font-size: 1.5em;
+}
+
+.fontnerko {
+  font-family: "Nerko One", cursive;
+}
+
+.myborder {
+  border-bottom: solid 1px #17a2b8;
+}
+
+#listeProduit {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.produit_contenant {
+  border: #17a2b8 solid 1px;
+  width: 252px;
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.produit_photo {
+  align-items: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 250px;
+}
+
+.produit_element {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.produit_nom {
+  font-family: "Nerko One", cursive;
+  color: #17a2b8;
+  margin-bottom: 0;
+  font-size: 1.8em;
+}
+
+.produit_prix {
+  font-family: "Nerko One", cursive;
+  color: #17a2b8;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.produit_action {
+  display: flex;
+  justify-content: center;
+  background-color: #17a2b8;
+  color: white;
+  overflow: hidden;
+  padding-bottom: 5px;
+  padding-left: -5px;
+}
+.produit_action:hover {
+  color: #17a2b8;
+  background-color: rgba(23, 162, 184, 0.1);
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+}
+
+#detailProduit {
+  margin-top: 2em;
+  margin-bottom: 100px;
+}
+
+#detailOption {
+  display: flex;
+  flex-direction: column;
+  color: #17a2b8;
+}
+
+#ajout_panier {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 5px 20px;
+}
+#ajout_panier:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s;
+  box-shadow: #17a2b8 6px 6px 15px;
+}
+
+.detail_illustration {
+  display: flex;
+  flex-direction: column;
+}
+.detail_photo {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.detail_photo:active {
+  transform: scale(2);
+}
+.detail_nom {
+  text-align: center;
+  color: #17a2b8;
+  font-family: "Finger Paint", cursive;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.detail_description {
+  text-align: center;
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.2em;
+}
+.detail_prix {
+  text-align: right;
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.5em;
+}
+.detail_information {
+  display: flex;
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  justify-content: space-between;
+}
+.detail_color {
+  color: #17a2b8;
+  border: #17a2b8 2px solid;
+  border-radius: 50px;
+}
+
+@media (min-width: 576px) {
+  .detail_photo {
+    width: 500px;
+  }
+}
+.error_div {
+  display: flex;
+  justify-content: center;
+}
+
+.error_logo {
+  color: #17a2b8;
+  font-size: 2.5em;
+  padding-right: 10px;
+}
+
+.error_text {
+  color: #17a2b8;
+  font-size: 1.7em;
+}
+
+.display_none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.form_panier {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 100px auto;
+  border: #17a2b8 1px solid;
+  border-radius: 50px;
+}
+
+.form_space {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.form_flex {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form_title {
+  color: #17a2b8;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Nerko One", cursive;
+}
+
+.form_label {
+  color: #17a2b8;
+  font-size: 1.5em;
+  font-family: "Nerko One", cursive;
+}
+
+.form_input {
+  border: #17a2b8 1px solid;
+  border-radius: 10px;
+  color: #17a2b8;
+  font-size: 1.1em;
+}
+
+.form_special {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_div {
+  border-bottom: #17a2b8 1px solid;
+  padding-bottom: 10px;
+}
+
+.form_checkbox {
+  color: #17a2b8;
+}
+
+@media (min-width: 992px) {
+  .form_flex {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .form_panier {
+    margin: 10px 0 100px 0;
+  }
+}
+#panier {
+  margin-bottom: 100px;
+}
+
+.panier_title {
+  text-align: center;
+  font-family: "Finger Paint", cursive;
+  color: #17a2b8;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.panier_p {
+  text-align: center;
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.5em;
+}
+
+.panier_table {
+  border: 1px solid #17a2b8;
+  margin: 0px auto;
+  box-shadow: #17a2b8 6px 6px 30px;
+}
+
+.panier_table tr {
+  border: 1px solid #17a2b8;
+  margin-bottom: 10px;
+}
+
+.panier_table td {
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.1em;
+}
+
+.panier_table th {
+  border: 1px solid #17a2b8;
+  text-align: center;
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.2em;
+}
+
+.panier_nom {
+  padding: 0px 5px;
+  text-align: center;
+}
+
+.panier_prix {
+  padding: 0px 5px;
+  text-align: center;
+}
+
+.panier_suprimer {
+  text-align: center;
+  color: red !important;
+}
+
+#sommeTotal {
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.panier_tdphoto {
+  width: 100px;
+}
+
+.photo_article {
+  text-align: center;
+  width: 100px;
+  padding: 10px 0;
+  display: inline;
+}
+
+.panier_button {
+  border-radius: 50px;
+  background-color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  padding: 5px 15px;
+  text-align: center;
+  color: white;
+  border: none;
+  font-size: 1.3em;
+  margin: 0 auto 100px auto;
+  display: block;
+}
+.panier_button:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .panier_table {
+    margin: 0px auto;
+  }
+
+  .photo_article {
+    width: 200px;
+  }
+
+  .panier_nom {
+    padding: 0px 20px;
+  }
+
+  .panier_prix {
+    padding: 0px 20px;
+  }
+
+  .panier_suprimer {
+    padding: 0px 40px;
+  }
+
+  .panier_button {
+    font-size: 2.5em;
+  }
+}
+.confirmation_title {
+  color: #17a2b8;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.confirmation_p {
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.detail_title {
+  color: #17a2b8;
+}
+
+.detail_p {
+  color: #17a2b8;
+  font-family: "Nerko One", cursive;
+  font-size: 1.2em;
+}
+
+.detail_div {
+  display: flex;
+}
+
+.container_marge {
+  margin-bottom: 200px;
+}
+
+.display_div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .display_div {
+    flex-direction: row;
+  }
+
+  #tableau_confirmation {
+    margin-left: 50px;
+  }
+}
+#nameDetail {
+  text-transform: uppercase;
+}
+
+#numberDetail {
+  text-transform: uppercase;
+}
+
+.nom_table {
+  border: 1px #17a2b8 solid;
+}
+
+.tableu_nom {
+  border: 1px #17a2b8 solid;
+}
+
+.colonne_nom {
+  width: 500px;
+}
+
+.colonne_prix {
+  width: 100px;
+}
+
+.article-confirmation {
+  text-align: center;
+}
+
+.confirm_total {
+  text-align: left !important;
+}
+
+#sommeConfirmTotal {
+  text-align: right;
+}
+
+.confirmation_text {
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
