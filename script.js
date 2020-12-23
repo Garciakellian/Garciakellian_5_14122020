@@ -274,64 +274,64 @@ annulerArticle = (i) => {
 // verification message erreure
 formValidation = () =>{
 
-let bouton = document.getElementById("bouton");
-
-
-let checkNumber = /^[0-9]+$/;
-let checkSpecial = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-let checkMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-]*$/;
-let checkLetter = /^[A-Za-z-]+$/;
-
-let checked = "";
- // teste nom
- let nom = document.getElementById("nom").value;
- if (checkLetter.test(nom) == false){
-   checked = "Veuillez saisir un nom valide"
- }
- // teste prenom
- let prenom = document.getElementById("prenom").value;
- if (checkLetter.test(prenom) == false){
-   checked = checked + "\n" +  "Veuillez saisir un prenom valide"
- }
- // teste email
- let email = document.getElementById("email").value;
- if (checkMail.test(email) == false){
-   checked = checked + "\n" +  "Veuillez saisir un email valide"
- }
- // teste adresse
- let adresse = document.getElementById("adresse").value;
- if (checkSpecial.test(adresse) == true){
-   checked = checked + "\n" +  "Veuillez saisir une adresse valide"
- }
- // teste ville
- let ville = document.getElementById("ville").value;
- if (checkLetter.test(ville) == false){
-   checked = checked + "\n" +  "Veuillez saisir une ville valide"
- }
- // teste code postale
- let cp = document.getElementById("cp").value;
- if (checkNumber.test(cp) == false || cp.length != 5){
-   checked = checked + "\n" +  "Veuillez saisir un code postale valide"
- }
-
-console.log(checked)
-
- if(checked != ""){
-   alert(checked);
- }else{
-    contact = {
-    lastName: nom,
-    firstName: prenom,
-    email: email,
-    address: adresse,
-    city: ville,
-    ZipCode: cp,
-    Gift: gift,
-    Information: information,
+  let bouton = document.getElementById("bouton");
+  
+  
+  let checkNumber = /^[0-9]+$/;
+  let checkSpecial = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+  let checkMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-]*$/;
+  let checkLetter = /^[A-Za-z-]+$/;
+  
+  let checked = "";
+   // teste nom
+   let nom = document.getElementById("nom").value;
+   if (checkLetter.test(nom) == false || nom.length < 3){
+     checked = "Veuillez saisir un nom valide"
+   }
+   // teste prenom
+   let prenom = document.getElementById("prenom").value;
+   if (checkLetter.test(prenom) == false || prenom.length < 3){
+     checked = checked + "\n" +  "Veuillez saisir un prenom valide"
+   }
+   // teste email
+   let email = document.getElementById("email").value;
+   if (checkMail.test(email) == false){
+     checked = checked + "\n" +  "Veuillez saisir un email valide"
+   }
+   // teste adresse
+   let adresse = document.getElementById("adresse").value;
+   if (checkSpecial.test(adresse) == true  || adresse.length < 5){
+     checked = checked + "\n" +  "Veuillez saisir une adresse valide"
+   }
+   // teste ville
+   let ville = document.getElementById("ville").value;
+   if (checkLetter.test(ville) == false || ville.length < 3){
+     checked = checked + "\n" +  "Veuillez saisir une ville valide"
+   }
+   // teste code postale
+   let cp = document.getElementById("cp").value;
+   if (checkNumber.test(cp) == false || cp.length != 5){
+     checked = checked + "\n" +  "Veuillez saisir un code postale valide"
+   }
+  
+  console.log(checked)
+  
+   if(checked != ""){
+     alert(checked);
+   }else{
+      contact = {
+      lastName: nom,
+      firstName: prenom,
+      email: email,
+      address: adresse,
+      city: ville,
+      ZipCode: cp,
+      Gift: gift,
+      Information: information,
+    }
+    return contact;
+   }
   }
-  return contact;
- }
-}
 basketValidation = () => {
   //Vérifier qu'il y ai au moins un produit dans le panier
   let etatPanier = JSON.parse(localStorage.getItem("panier"));
